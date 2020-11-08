@@ -1,0 +1,36 @@
+.TilesContainer {
+  filter: saturate(200%);
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  grid-template-areas: "services graphics" "textEditor portfolio" "myname ." "serverRack about" "contact .";
+  background: grey;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+  .App {
+    background: #e3e3e1;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .TilesContainer {
+    position: absolute;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "services portfolio textEditor" "graphics myname myname" "serverRack about contact";
+    background: grey;
+    width: 80%;
+    height: 80%;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */

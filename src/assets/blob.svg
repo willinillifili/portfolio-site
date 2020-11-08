@@ -1,0 +1,15 @@
+<svg
+     className="blob"
+     width="276"
+     height="222"
+     viewBox="0 0 auto 222"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+  <path d="M82.4652 157.052C98.3339 187.408 186.949 204.874 229.273 209.812C230.231 207.146 228.517 197.427 213.995 179.881C195.843 157.95 236.059 128.836 179.573 68.6874C123.087 8.53916 110.882 23.2801 53.6456 36.1828C-3.59097 49.0855 62.6294 119.108 82.4652 157.052Z" fill="url(#paint0_linear)"/>
+    <defs>
+      <linearGradient id="paint0_linear" x1="-12.5" y1="128" x2="289.5" y2="19" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#DDF0E1"/>
+        <stop offset="1" stop-color="#F0DDDD"/>
+      </linearGradient>
+    </defs>
+</svg>

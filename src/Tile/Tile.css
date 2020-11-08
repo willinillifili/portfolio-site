@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200&display=swap");
+.TileContainer {
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 3;
+  flex: 0;
+  padding: 20px;
+  transition: flex 1s;
+  line-height: 30px;
+}
+.TileContainer h1 {
+  font-weight: 200;
+  transition: width 1s height 1s;
+}
+
+article {
+  position: relative;
+}
+
+.services {
+  background: white;
+  z-index: 2;
+  grid-area: services;
+}
+
+.portfolio {
+  background: #FAFAFA;
+  grid-area: portfolio;
+}
+
+.textEditor {
+  grid-area: textEditor;
+  position: relative;
+  background: #F0F0DD;
+}
+.textEditor:after {
+  display: block;
+  width: 100%;
+  content: "";
+  height: 10px;
+  background: #C4C4C4;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.graphics {
+  grid-area: graphics;
+  background: white;
+  z-index: 4;
+}
+
+.name {
+  grid-area: myname;
+  background: white;
+  grid-column: 1/span 2;
+}
+.name h1 {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/*.server { background: white; }*/
+.serverRack {
+  background: white;
+  grid-area: serverRack;
+  z-index: 5;
+}
+
+.about {
+  grid-area: about;
+  background: #FAFAFA;
+}
+
+.contact {
+  grid-area: contact;
+  background: #F0F0DD;
+}
+
+.abstract {
+  grid-area: abstract;
+  z-index: 1;
+}
+
+.blob {
+  position: absolute;
+  z-index: 2;
+  top: 100px;
+  left: 70%;
+}
+
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+  .name {
+    grid-column: 2/span 2;
+  }
+
+  .abstract {
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    z-index: 6;
+  }
+
+  .serverRack {
+    background: #F0F0DD;
+  }
+}
+
+/*# sourceMappingURL=Tile.css.map */

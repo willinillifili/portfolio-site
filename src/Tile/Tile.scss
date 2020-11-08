@@ -1,0 +1,116 @@
+@use '../theme/mixins' as mix;
+@use '../theme/fonts';
+@use '../theme/palette' as pal;
+
+.TileContainer {
+  font-family: 'Josefin Sans', sans-serif;
+  @include mix.flex;
+  cursor: pointer;
+  & h1 {
+    font-weight: 200;
+    transition: width 1s height 1s;
+  }
+  z-index: 3;
+  flex: 0;
+  padding: 20px;
+  transition: flex 1s;
+  line-height: 30px;
+}
+
+article { position: relative;}
+
+.services {
+  background: white;
+  z-index: 2;
+  grid-area: services;
+}
+
+.portfolio {
+  background: pal.$second;
+  grid-area: portfolio;
+}
+
+.textEditor {
+  grid-area: textEditor;
+  position: relative;
+  background: pal.$third;
+  &:after {
+    display: block;
+    width: 100%;
+    content: "";
+    height: 10px;
+    background: #C4C4C4;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+  }
+}
+
+.graphics {
+  grid-area: graphics;
+  background: white;
+  z-index: 4;
+}
+
+.name {
+    grid-area: myname;
+    background: white;
+    grid-column: 1 / span 2;
+    & h1 {
+      font-weight: bold;
+      color: rgba(0,0,0,0.6);
+    }
+  }
+
+/*.server { background: white; }*/
+.serverRack {
+  background: white;
+  grid-area: serverRack;
+  z-index: 5;
+}
+
+.about {
+  grid-area: about;
+  background: pal.$second;
+}
+
+.contact {
+  grid-area: contact;
+  background: pal.$third;
+}
+
+.abstract {
+  grid-area: abstract;
+  z-index: 1;
+}
+
+.blob {
+  position: absolute;
+  z-index: 2;
+  top: 100px;
+  left: 70%;
+}
+
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+  .name {
+    grid-column: 2 / span 2;
+  }
+
+  .abstract {
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    z-index: 6;
+  }
+
+  .serverRack{
+    background: pal.$third;
+  }
+
+}
