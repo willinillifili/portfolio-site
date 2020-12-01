@@ -52,7 +52,7 @@ class Tile extends React.Component {
     }
 
     return (
-      <article className={className}>
+      <article className={className} onClick={(e) => this.props.onClick(e)}>
         <h1>{this.props.text}</h1>
         { svg }
       </article>

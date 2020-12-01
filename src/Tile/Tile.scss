@@ -3,18 +3,30 @@
 @use '../theme/palette' as pal;
 
 .TileContainer {
-  font-family: 'Josefin Sans', sans-serif;
   @include mix.flex;
   cursor: pointer;
   & h1 {
     font-weight: 200;
     transition: width 1s height 1s;
+    color: gray;
   }
   z-index: 3;
-  flex: 0;
   padding: 20px;
-  transition: flex 1s;
+  left: 0px;
+  transition:
+  transform 0.3s linear,
+  opacity 0.2s linear;
   line-height: 30px;
+}
+
+.flip1 {
+  //transform: scaleX(-1);
+  opacity: 0%;
+}
+
+.flip2 {
+  transform: scaleX(-1);
+  opacity: 0%;
 }
 
 article { position: relative;}
@@ -48,7 +60,7 @@ article { position: relative;}
 
 .graphics {
   grid-area: graphics;
-  background: white;
+  background: pal.$main;
   z-index: 4;
 }
 
@@ -57,8 +69,8 @@ article { position: relative;}
     background: white;
     grid-column: 1 / span 2;
     & h1 {
-      font-weight: bold;
-      color: rgba(0,0,0,0.6);
+      font-weight: normal !important;
+      color: rgba(0,0,0,0.62);
     }
   }
 
@@ -85,6 +97,7 @@ article { position: relative;}
 }
 
 .blob {
+  display: none;
   position: absolute;
   z-index: 2;
   top: 100px;

@@ -1,0 +1,16 @@
+@use '../theme/mixins' as mix;
+@use '../theme/fonts';
+@use '../theme/palette' as pal;
+
+.info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  @include  mix.flex(column,center,center);
+  background: white;
+  z-index: -2;
+}
+
+@media screen only and (min-width: 800px) {
+
+}
