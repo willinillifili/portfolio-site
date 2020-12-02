@@ -3,9 +3,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   z-index: 3;
   padding: 20px;
+  position: relative;
   left: 0px;
   transition: transform 0.3s linear, opacity 0.2s linear;
   line-height: 30px;
@@ -14,6 +14,45 @@
   font-weight: 200;
   transition: width 1s height 1s;
   color: gray;
+}
+
+.informational {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.informational:hover {
+  background: white;
+}
+
+.title-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-container h1 {
+  transition: all 0.2s;
+}
+
+.closeIcon {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 24px;
+  margin-right: 20px;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  transform: scale(0);
+  transition: transform 0.2s;
+}
+
+.closeSectionRevealed {
+  position: relative;
+  z-index: 0;
+  transform: scale(1);
 }
 
 .flip1 {

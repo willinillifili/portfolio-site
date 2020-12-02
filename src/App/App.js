@@ -15,9 +15,10 @@ class App extends React.Component {
     this.handleTileClick = this.handleTileClick.bind(this);
     this.handleInfo = this.handleInfo.bind(this);
     this.flipTiles = this.flipTiles.bind(this);
+    this.handleTitleSection = this.handleTitleSection.bind(this);
   }
 
-  handleTileClick(e) {
+  async handleTileClick(e) {
     const tile = e.currentTarget;
 
     // do nothing when decoration tiles are clicked
@@ -31,8 +32,9 @@ class App extends React.Component {
     // if all tiles are flipped, only react to a click on the unflipped tile
 
     if (this.state.tilesFlipped && thisClassName != this.state.info) return;
-    this.handleInfo(thisClassName);
-    this.flipTiles(thisClassName);
+    await this.handleInfo(thisClassName);
+    await this.flipTiles(thisClassName);
+    await this.handleTitleSection(thisClassName);
   }
 
   handleInfo(info) {
@@ -69,6 +71,16 @@ class App extends React.Component {
       delay += 30;
     });
     this.setState({tilesFlipped : !this.state.tilesFlipped});
+  }
+
+  handleTitleSection(tileClassName) {
+    let xIconClassList = document
+    .querySelector('.' + tileClassName + ' .title-container .closeIcon')
+    .classList;
+
+    this.state.tilesFlipped ?
+    xIconClassList.add('closeSectionRevealed') :
+    xIconClassList.remove('closeSectionRevealed')
   }
 
   render() {

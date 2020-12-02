@@ -1,1 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+:wght@200&display=swap');
+
+button, p, span, div, a  {
+  font-family: 'Josefin';
+}

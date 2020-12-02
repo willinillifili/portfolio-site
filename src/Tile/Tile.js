@@ -14,7 +14,6 @@ class Tile extends React.Component {
   }
 
   render() {
-
     let className = "TileContainer";
     let content;
     let svg;
@@ -53,7 +52,10 @@ class Tile extends React.Component {
 
     return (
       <article className={className} onClick={(e) => this.props.onClick(e)}>
-        <h1>{this.props.text}</h1>
+        <div class="title-container">
+          <button class="closeIcon" title="close info section">✕</button>
+          <h1>{this.props.text}</h1>
+        </div>
         { svg }
       </article>
     );

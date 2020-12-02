@@ -1,5 +1,4 @@
 .TilesContainer {
-  filter: saturate(200%);
   position: absolute;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -13,7 +12,7 @@
 
 @media only screen and (min-width: 800px) {
   .App {
-    background: #e3e3e1;
+    background: rgba(0, 0, 0, 0.01);
     width: 100%;
     height: 100vh;
     display: flex;
