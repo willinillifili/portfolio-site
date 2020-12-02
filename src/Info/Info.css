@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap");
 .info {
   position: absolute;
   width: 100%;
@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   background: white;
-  z-index: -2;
+  z-index: 0;
 }
 
 /*# sourceMappingURL=Info.css.map */
